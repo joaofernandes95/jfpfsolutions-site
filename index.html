@@ -14,8 +14,8 @@
 <header class="site-header" id="top">
   <div class="container header-inner">
     <a href="#top" class="brand" aria-label="JFPF Solutions">
-      <span class="brand-badge">JF</span>
-      <span class="brand-name">JFPF<span class="brand-sub">Solutions</span></span>
+      <span class="brand-mark" aria-hidden="true">&gt;_</span>
+      <span>jfpf<span class="brand-sub">/solutions</span></span>
     </a>
 
     <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
@@ -25,7 +25,6 @@
     <nav class="main-nav" id="mainNav">
       <ul>
         <li><a href="#services" data-en="Services" data-pt="Serviços">Services</a></li>
-        <li><a href="#work" data-en="Work" data-pt="Trabalho">Work</a></li>
         <li><a href="#process" data-en="Process" data-pt="Processo">Process</a></li>
         <li><a href="#about" data-en="About" data-pt="Sobre">About</a></li>
         <li><a href="#contact" data-en="Contact" data-pt="Contacto">Contact</a></li>
@@ -45,25 +44,36 @@
 
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <div class="hero-glow"></div>
   <div class="container hero-inner">
-    <p class="hero-kicker" data-en="Web &amp; mobile development" data-pt="Desenvolvimento web e mobile">Web &amp; mobile development</p>
-    <h1 data-en="Websites and applications built for your business."
-        data-pt="Websites e aplicações à medida do seu negócio.">
-      Websites and applications built for your business.</h1>
-    <p class="hero-lead"
-       data-en="JFPF Solutions designs and develops websites, web applications and mobile apps for companies in Portugal and abroad. You work directly with the developer, from planning to launch and ongoing support."
-       data-pt="A JFPF Solutions concebe e desenvolve websites, aplicações web e apps móveis para empresas em Portugal e no estrangeiro. Trabalha diretamente com o programador, do planeamento ao lançamento e ao suporte contínuo.">
-      JFPF Solutions designs and develops websites, web applications and mobile apps for companies in Portugal and abroad. You work directly with the developer, from planning to launch and ongoing support.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary btn-lg" data-en="Request a quote" data-pt="Pedir orçamento">Request a quote</a>
-      <a href="#work" class="btn btn-outline btn-lg" data-en="View work" data-pt="Ver trabalho">View work</a>
+    <div>
+      <p class="prompt"><b>~/jfpf</b> $ <span data-en="web &amp; mobile development" data-pt="desenvolvimento web e mobile">web &amp; mobile development</span></p>
+      <h1 data-en="Websites and applications built for your business."
+          data-pt="Websites e aplicações à medida do seu negócio.">
+        Websites and applications built for your business.</h1>
+      <p class="hero-lead"
+         data-en="JFPF Solutions designs and develops websites, web applications and mobile apps for companies in Portugal and abroad. You work directly with the developer, from planning to launch and ongoing support."
+         data-pt="A JFPF Solutions concebe e desenvolve websites, aplicações web e apps móveis para empresas em Portugal e no estrangeiro. Trabalha diretamente com o programador, do planeamento ao lançamento e ao suporte contínuo.">
+        JFPF Solutions designs and develops websites, web applications and mobile apps for companies in Portugal and abroad. You work directly with the developer, from planning to launch and ongoing support.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary btn-lg" data-en="Request a quote" data-pt="Pedir orçamento">Request a quote</a>
+        <a href="#process" class="btn btn-outline btn-lg" data-en="How it works" data-pt="Como funciona">How it works</a>
+      </div>
     </div>
-    <ul class="hero-badges">
-      <li data-en="Independent developer" data-pt="Programador independente">Independent developer</li>
-      <li data-en="Web &amp; mobile" data-pt="Web e mobile">Web &amp; mobile</li>
-      <li data-en="Based in Portugal" data-pt="Sediada em Portugal">Based in Portugal</li>
-    </ul>
+
+    <div class="term" aria-label="JFPF Solutions at a glance" role="figure">
+      <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><span>jfpf — zsh</span></div>
+      <div class="term-body">
+        <p class="cmd">jfpf --about</p>
+        <dl>
+          <dt data-en="who" data-pt="quem">who</dt><dd>João Fernandes</dd>
+          <dt data-en="role" data-pt="função">role</dt><dd data-en="Independent developer" data-pt="Programador independente">Independent developer</dd>
+          <dt data-en="builds" data-pt="faz">builds</dt><dd data-en="Web · iOS · Android" data-pt="Web · iOS · Android">Web · iOS · Android</dd>
+          <dt data-en="based" data-pt="onde">based</dt><dd data-en="Portugal · works remotely" data-pt="Portugal · trabalho remoto">Portugal · works remotely</dd>
+          <dt data-en="status" data-pt="estado">status</dt><dd class="ok" data-en="● taking on new projects" data-pt="● disponível para novos projetos">● taking on new projects</dd>
+        </dl>
+        <p class="cmd"><span class="cursor" aria-hidden="true"></span></p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -78,47 +88,55 @@
         Design, development and support for web and mobile software.</p>
     </div>
 
-    <div class="cards">
-      <article class="card">
-        <div class="card-icon" aria-hidden="true">
+    <ul class="services">
+      <li class="service">
+        <div class="service-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="14" rx="2"/><path d="M2.5 8h19M8 21h8"/><path d="M9.5 11.5 8 13l1.5 1.5M14.5 11.5 16 13l-1.5 1.5"/></svg>
         </div>
-        <h3 data-en="Web development" data-pt="Desenvolvimento web">Web development</h3>
-        <p data-en="Business websites, landing pages and custom web applications. Responsive, fast, and built on maintainable code."
-           data-pt="Sites institucionais, páginas de destino e aplicações web à medida. Responsivos, rápidos e com código sustentável.">
-          Business websites, landing pages and custom web applications. Responsive, fast, and built on maintainable code.</p>
-      </article>
+        <div>
+          <h3 data-en="Web development" data-pt="Desenvolvimento web">Web development</h3>
+          <p data-en="Business websites, landing pages and custom web applications. Responsive, fast, and built on maintainable code."
+             data-pt="Sites institucionais, páginas de destino e aplicações web à medida. Responsivos, rápidos e com código sustentável.">
+            Business websites, landing pages and custom web applications. Responsive, fast, and built on maintainable code.</p>
+        </div>
+      </li>
 
-      <article class="card">
-        <div class="card-icon" aria-hidden="true">
+      <li class="service">
+        <div class="service-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>
         </div>
-        <h3 data-en="Mobile apps" data-pt="Aplicações móveis">Mobile apps</h3>
-        <p data-en="iOS and Android apps, native or cross-platform, from prototype through to publishing on the app stores."
-           data-pt="Apps iOS e Android, nativas ou multiplataforma, do protótipo à publicação nas lojas.">
-          iOS and Android apps, native or cross-platform, from prototype through to publishing on the app stores.</p>
-      </article>
+        <div>
+          <h3 data-en="Mobile apps" data-pt="Aplicações móveis">Mobile apps</h3>
+          <p data-en="iOS and Android apps, native or cross-platform, from prototype through to publishing on the app stores."
+             data-pt="Apps iOS e Android, nativas ou multiplataforma, do protótipo à publicação nas lojas.">
+            iOS and Android apps, native or cross-platform, from prototype through to publishing on the app stores.</p>
+        </div>
+      </li>
 
-      <article class="card">
-        <div class="card-icon" aria-hidden="true">
+      <li class="service">
+        <div class="service-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5 20.5 9.5 8 22H2v-6z"/><path d="M12.5 5.5 18.5 11.5"/></svg>
         </div>
-        <h3 data-en="UX/UI design" data-pt="Design UX/UI">UX/UI design</h3>
-        <p data-en="Wireframes, interface design and user research to make software clear and straightforward to use."
-           data-pt="Wireframes, design de interfaces e investigação de utilizadores para tornar o software claro e simples de usar.">
-          Wireframes, interface design and user research to make software clear and straightforward to use.</p>
-      </article>
+        <div>
+          <h3 data-en="UX/UI design" data-pt="Design UX/UI">UX/UI design</h3>
+          <p data-en="Wireframes, interface design and user research to make software clear and straightforward to use."
+             data-pt="Wireframes, design de interfaces e investigação de utilizadores para tornar o software claro e simples de usar.">
+            Wireframes, interface design and user research to make software clear and straightforward to use.</p>
+        </div>
+      </li>
 
-      <article class="card">
-        <div class="card-icon" aria-hidden="true">
+      <li class="service">
+        <div class="service-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg>
         </div>
-        <h3 data-en="Hosting &amp; maintenance" data-pt="Alojamento e manutenção">Hosting &amp; maintenance</h3>
-        <p data-en="Hosting setup, updates, backups, security and ongoing technical support after your project goes live."
-           data-pt="Configuração de alojamento, atualizações, cópias de segurança, segurança e suporte técnico contínuo após o lançamento.">
-          Hosting setup, updates, backups, security and ongoing technical support after your project goes live.</p>
-      </article>
-    </div>
+        <div>
+          <h3 data-en="Hosting &amp; maintenance" data-pt="Alojamento e manutenção">Hosting &amp; maintenance</h3>
+          <p data-en="Hosting setup, updates, backups, security and ongoing technical support after your project goes live."
+             data-pt="Configuração de alojamento, atualizações, cópias de segurança, segurança e suporte técnico contínuo após o lançamento.">
+            Hosting setup, updates, backups, security and ongoing technical support after your project goes live.</p>
+        </div>
+      </li>
+    </ul>
 
     <div class="tech-strip">
       <span data-en="Technologies" data-pt="Tecnologias">Technologies</span>
@@ -126,54 +144,6 @@
         <li>React</li><li>Next.js</li><li>Node.js</li><li>React Native</li>
         <li>Flutter</li><li>WordPress</li><li>PostgreSQL</li><li>AWS</li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ===== WORK / PORTFOLIO ===== -->
-<section class="section section-soft" id="work">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow" data-en="Work" data-pt="Trabalho">Work</span>
-      <h2 data-en="Recent projects" data-pt="Projetos recentes">Recent projects</h2>
-      <p data-en="A selection of recent work. More available on request."
-         data-pt="Uma seleção de trabalho recente. Mais disponível a pedido.">
-        A selection of recent work. More available on request.</p>
-    </div>
-
-    <div class="work-grid">
-      <a class="work-card" href="https://tmportugal.com" target="_blank" rel="noopener">
-        <div class="work-thumb work-thumb--tmp"><span>TMPortugal</span></div>
-        <div class="work-body">
-          <span class="work-tag" data-en="Website" data-pt="Website">Website</span>
-          <h3>TMPortugal</h3>
-          <p data-en="A complete rebuild of an appliance repair company's website: static build, WhatsApp contact, Google reviews and lead forms."
-             data-pt="Reconstrução completa do website de uma empresa de reparação de eletrodomésticos: build estático, contacto WhatsApp, avaliações Google e formulários.">
-            A complete rebuild of an appliance repair company's website: static build, WhatsApp contact, Google reviews and lead forms.</p>
-        </div>
-      </a>
-
-      <div class="work-card is-placeholder">
-        <div class="work-thumb work-thumb--two"><span data-en="In preparation" data-pt="Em preparação">In preparation</span></div>
-        <div class="work-body">
-          <span class="work-tag" data-en="Mobile app" data-pt="App móvel">Mobile app</span>
-          <h3 data-en="Case study in preparation" data-pt="Caso de estudo em preparação">Case study in preparation</h3>
-          <p data-en="A mobile application project. Details to follow."
-             data-pt="Um projeto de aplicação móvel. Detalhes em breve.">
-            A mobile application project. Details to follow.</p>
-        </div>
-      </div>
-
-      <div class="work-card is-placeholder">
-        <div class="work-thumb work-thumb--three"><span data-en="In preparation" data-pt="Em preparação">In preparation</span></div>
-        <div class="work-body">
-          <span class="work-tag" data-en="Web application" data-pt="Aplicação web">Web application</span>
-          <h3 data-en="Case study in preparation" data-pt="Caso de estudo em preparação">Case study in preparation</h3>
-          <p data-en="A web application project. Details to follow."
-             data-pt="Um projeto de aplicação web. Detalhes em breve.">
-            A web application project. Details to follow.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -223,7 +193,7 @@
 </section>
 
 <!-- ===== ABOUT ===== -->
-<section class="section section-dark" id="about">
+<section class="section" id="about">
   <div class="container about-grid">
     <div class="about-text">
       <span class="eyebrow" data-en="About" data-pt="Sobre">About</span>
@@ -245,7 +215,7 @@
 </section>
 
 <!-- ===== CONTACT ===== -->
-<section class="section section-soft" id="contact">
+<section class="section" id="contact">
   <div class="container contact-grid">
     <div class="contact-intro">
       <span class="eyebrow" data-en="Contact" data-pt="Contacto">Contact</span>
@@ -307,9 +277,9 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <a href="#top" class="brand brand--footer">
-        <span class="brand-badge">JF</span>
-        <span class="brand-name">JFPF<span class="brand-sub">Solutions</span></span>
+      <a href="#top" class="brand" aria-label="JFPF Solutions">
+        <span class="brand-mark" aria-hidden="true">&gt;_</span>
+        <span>jfpf<span class="brand-sub">/solutions</span></span>
       </a>
       <p data-en="Web and mobile software development for businesses in Portugal and abroad."
          data-pt="Desenvolvimento de software web e mobile para empresas em Portugal e no estrangeiro.">
@@ -327,7 +297,6 @@
     <div class="footer-col">
       <h4 data-en="Company" data-pt="Empresa">Company</h4>
       <ul>
-        <li><a href="#work" data-en="Work" data-pt="Trabalho">Work</a></li>
         <li><a href="#about" data-en="About" data-pt="Sobre">About</a></li>
         <li><a href="#contact" data-en="Contact" data-pt="Contacto">Contact</a></li>
         <li><a href="mailto:jfpfsolutions@gmail.com">jfpfsolutions@gmail.com</a></li>

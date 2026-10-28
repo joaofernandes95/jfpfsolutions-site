@@ -6,8 +6,8 @@ development. No WordPress, no build step. Just open `index.html`.
 ## Structure
 ```
 jfpfsolutions-site/
-├── index.html          One-page site: Hero, Services, Work, Process, About, Contact
-├── css/styles.css      Styling (indigo/violet palette)
+├── index.html          One-page site: Hero, Services, Process, About, Contact
+├── css/styles.css      Styling (dark, green accent, monospace labels; system fonts only)
 ├── js/main.js          Language toggle, mobile nav, contact form
 └── assets/favicon.svg  JF monogram favicon
 ```
@@ -26,9 +26,9 @@ To receive submissions directly in the inbox with no server:
 A hidden honeypot field blocks basic spam bots.
 
 ## Fill in later
-- **Portfolio:** the first card (TMPortugal) is real and links to the live site. The other two are
-  placeholders — replace the titles, tags, thumbnails and links in the `#work` section as projects land.
-- **Logo:** currently a CSS "JF" monogram badge + wordmark. Swap for a real logo image if you get one.
+- **Portfolio:** removed until there are a few projects to show. The TMPortugal entry is in git
+  history (commit f4831d1) if you want to bring the section back.
+- **Logo:** currently a monospace ">_ jfpf/solutions" wordmark (and a matching favicon). Swap for a real logo image if you get one.
 - **Social links / phone:** add to the contact section and footer when ready.
 
 ## Deploy

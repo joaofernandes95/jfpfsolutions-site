@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 432" role="img" aria-label="Indigo IPTV">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2B2670"/>
+      <stop offset="0.52" stop-color="#4C42E0"/>
+      <stop offset="1" stop-color="#7E6BFF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="20%" r="90%">
+      <stop offset="0" stop-color="#B4AAFF" stop-opacity="0.55"/>
+      <stop offset="0.45" stop-color="#B4AAFF" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#B4AAFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tri" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D9DEFF"/>
+    </linearGradient>
+    <clipPath id="sq"><rect width="432" height="432" rx="94" ry="94"/></clipPath>
+  </defs>
+  <g clip-path="url(#sq)">
+    <rect width="432" height="432" fill="url(#g)"/>
+    <rect width="432" height="432" fill="url(#glow)"/>
+  </g>
+  <path d="M326.6 164.4 A122 122 0 1 0 326.6 267.6" fill="none"
+        stroke="#FFFFFF" stroke-opacity="0.95" stroke-width="16" stroke-linecap="round"/>
+  <path d="M174 138 L312 216 L174 294 Z" fill="#17143F" opacity="0.30"
+        stroke="#17143F" stroke-width="28" stroke-linejoin="round" transform="translate(5,8)"/>
+  <path d="M174 138 L312 216 L174 294 Z" fill="url(#tri)"
+        stroke="url(#tri)" stroke-width="28" stroke-linejoin="round"/>
+</svg>

@@ -9,9 +9,11 @@
     MAIL_TO: 'jfpfsolutions@gmail.com'
   };
 
+  // Each page can name itself per language on <html data-title-en/-pt>.
+  var root = document.documentElement;
   var TITLES = {
-    en: 'JFPF Solutions — Web & Mobile Development',
-    pt: 'JFPF Solutions — Desenvolvimento Web e Mobile'
+    en: root.getAttribute('data-title-en') || 'JFPF Solutions — Web & Mobile Development',
+    pt: root.getAttribute('data-title-pt') || 'JFPF Solutions — Desenvolvimento Web e Mobile'
   };
 
   /* ---- Year ---- */

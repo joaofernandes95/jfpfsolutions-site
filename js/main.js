@@ -6,7 +6,7 @@
     // Web3Forms: free access key from https://web3forms.com (delivers to jfpfsolutions@gmail.com).
     // Leave empty to fall back to opening the visitor's email client (mailto).
     WEB3FORMS_ACCESS_KEY: '',
-    MAIL_TO: 'jfpfsolutions@gmail.com'
+    MAIL_TO: 'support@jfpfsolutions.com'
   };
 
   // Each page can name itself per language on <html data-title-en/-pt>.

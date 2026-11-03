@@ -185,7 +185,7 @@ html:not([lang="pt"]) .only-pt,html[lang="pt"] .only-en{display:none!important}
 /* ===== Device frames for screenshots ===== */
 .phone{position:relative;width:min(300px,72vw);border-radius:54px;padding:12px;
   background:#05070a;border:1px solid #3a414b;box-shadow:0 0 0 1px #000,0 30px 60px -20px rgba(0,0,0,.7)}
-.phone img{width:100%;aspect-ratio:1179/2556;object-fit:cover;border-radius:42px}
+.phone img,.phone video{display:block;width:100%;height:auto;aspect-ratio:1179/2556;object-fit:cover;border-radius:42px}
 .phone--sm{width:min(260px,64vw);border-radius:48px;padding:11px}
 .phone--sm img{border-radius:37px}
 .tablet{border-radius:26px;padding:14px;background:#05070a;border:1px solid #3a414b;box-shadow:0 30px 60px -24px rgba(0,0,0,.7)}

@@ -223,6 +223,18 @@ html:not([lang="pt"]) .only-pt,html[lang="pt"] .only-en{display:none!important}
 
 .platforms{list-style:none;margin:2rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem;font-family:var(--mono);font-size:.85rem}
 .platforms li{padding:.25rem .65rem;border:1px solid var(--line);border-radius:var(--radius);color:var(--text-2)}
+.platforms li.soon{border-style:dashed;color:var(--muted)}
+
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;align-items:start}
+.plan{border:1px solid var(--line);border-radius:8px;background:var(--bg-2);padding:1.6rem 1.6rem 1.4rem}
+.plan--premium{border-color:#6c6fff}
+.plan h3{margin:0 0 .2rem}
+.plan-price{font-family:var(--mono);font-size:1.5rem;color:var(--text);margin:0 0 1.2rem}
+.plan-price small{display:block;font-size:.85rem;color:var(--muted);margin-top:.25rem}
+.plan .about-points{background:var(--bg)}
+.tv-shot{max-width:880px;margin:0 auto 5rem}
+.tv-shot .tablet{border-radius:12px;padding:8px}
+.tv-shot .tablet img{border-radius:5px}
 
 .faq{border-top:1px solid var(--line);max-width:820px}
 .faq details{border-bottom:1px solid var(--line)}
@@ -248,7 +260,7 @@ html:not([lang="pt"]) .only-pt,html[lang="pt"] .only-en{display:none!important}
 
 /* ===== Responsive ===== */
 @media(max-width:960px){
-  .hero-inner,.about-grid,.contact-grid,.app-hero,.product,.wide-shots{grid-template-columns:1fr;gap:2.4rem}
+  .hero-inner,.about-grid,.contact-grid,.app-hero,.product,.wide-shots,.plans{grid-template-columns:1fr;gap:2.4rem}
   .product-shot{margin-bottom:-5rem}
   .gallery{grid-template-columns:repeat(2,1fr);gap:3rem 3rem;padding:0 1.5rem}
   .steps{grid-template-columns:1fr 1fr;row-gap:2rem}

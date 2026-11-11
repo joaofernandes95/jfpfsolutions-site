@@ -62,6 +62,29 @@
     });
   }
 
+  /* ---- Header drop-downs (the Apps menu) ----
+     A <details> opens and closes by itself; this also closes it on a click
+     outside it, on Escape, and once one of its links is followed. */
+  var menus = document.querySelectorAll('.nav-menu details');
+  if (menus.length) {
+    document.addEventListener('click', function (e) {
+      menus.forEach(function (d) { if (d.open && !d.contains(e.target)) d.open = false; });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      menus.forEach(function (d) {
+        if (!d.open) return;
+        d.open = false;
+        if (d.contains(document.activeElement)) d.querySelector('summary').focus();
+      });
+    });
+    menus.forEach(function (d) {
+      d.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { d.open = false; });
+      });
+    });
+  }
+
   /* ---- Logo scrolls to top ---- */
   document.querySelectorAll('.brand[href="#top"]').forEach(function (brand) {
     brand.addEventListener('click', function (e) {

@@ -25,8 +25,17 @@
     <nav class="main-nav" id="mainNav">
       <ul>
         <li><a href="#services" data-en="Services" data-pt="Serviços">Services</a></li>
-        <li><a href="indigo-iptv/">Indigo IPTV</a></li>
-        <li><a href="luar/">Luar</a></li>
+        <li class="nav-menu">
+          <details>
+            <summary data-en="Apps" data-pt="Apps">Apps</summary>
+            <!-- New app: add it here, in privacy/index.html, in the footer and in #apps. -->
+            <ul>
+              <li><a href="indigo-iptv/"><img src="assets/indigo/icon.svg" alt="" width="36" height="36"><span>Indigo IPTV<small data-en="Player for your IPTV service" data-pt="Leitor para o seu serviço IPTV">Player for your IPTV service</small></span></a></li>
+              <li><a href="luar/"><img src="assets/luar/icon.webp" alt="" width="36" height="36"><span>Luar<small data-en="A calm clock for Apple TV" data-pt="Um relógio calmo para a Apple TV">A calm clock for Apple TV</small></span></a></li>
+              <li class="nav-menu-all"><a href="#apps" data-en="All apps →" data-pt="Todas as apps →">All apps →</a></li>
+            </ul>
+          </details>
+        </li>
         <li><a href="#process" data-en="Process" data-pt="Processo">Process</a></li>
         <li><a href="#about" data-en="About" data-pt="Sobre">About</a></li>
         <li><a href="#contact" data-en="Contact" data-pt="Contacto">Contact</a></li>
@@ -140,12 +149,26 @@
       </li>
     </ul>
 
-    <div class="tech-strip">
-      <span data-en="Technologies" data-pt="Tecnologias">Technologies</span>
-      <ul>
-        <li>React</li><li>Next.js</li><li>Node.js</li><li>React Native</li>
-        <li>Flutter</li><li>WordPress</li><li>PostgreSQL</li><li>AWS</li>
-      </ul>
+    <div class="tech">
+      <h3 class="tech-title" data-en="Technologies we work with" data-pt="Tecnologias com que trabalhamos">Technologies we work with</h3>
+      <div class="tech-groups">
+        <div class="tech-group">
+          <h4>Apple</h4>
+          <ul><li>Swift</li><li>SwiftUI</li><li>iOS</li><li>iPadOS</li><li>tvOS</li><li>watchOS</li></ul>
+        </div>
+        <div class="tech-group">
+          <h4>Web</h4>
+          <ul><li>TypeScript</li><li>React</li><li>Next.js</li><li>Node.js</li><li>Tailwind CSS</li></ul>
+        </div>
+        <div class="tech-group">
+          <h4 data-en="Cross-platform" data-pt="Multiplataforma">Cross-platform</h4>
+          <ul><li>Capacitor</li><li>Android</li><li>Electron</li><li>PWA</li></ul>
+        </div>
+        <div class="tech-group">
+          <h4 data-en="Back end &amp; hosting" data-pt="Back end e alojamento">Back end &amp; hosting</h4>
+          <ul><li>PostgreSQL</li><li>Supabase</li><li>Stripe</li><li>Docker</li><li>Vercel</li><li>Cloudflare</li></ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -319,7 +342,7 @@
 
 <!-- ===== FOOTER ===== -->
 <footer class="site-footer">
-  <div class="container footer-inner">
+  <div class="container footer-inner footer-inner--4">
     <div class="footer-brand">
       <a href="#top" class="brand" aria-label="JFPF Solutions">
         <span class="brand-mark" aria-hidden="true">&gt;_</span>
@@ -339,10 +362,15 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4 data-en="Company" data-pt="Empresa">Company</h4>
+      <h4 data-en="Apps" data-pt="Apps">Apps</h4>
       <ul>
         <li><a href="indigo-iptv/">Indigo IPTV</a></li>
         <li><a href="luar/">Luar</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Company" data-pt="Empresa">Company</h4>
+      <ul>
         <li><a href="#about" data-en="About" data-pt="Sobre">About</a></li>
         <li><a href="#contact" data-en="Contact" data-pt="Contacto">Contact</a></li>
         <li><a href="privacy/" data-en="Privacy policy" data-pt="Política de privacidade">Privacy policy</a></li>

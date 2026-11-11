@@ -56,9 +56,30 @@ p{margin:0 0 1em}
 .brand-mark{color:var(--green)}
 .brand-sub{color:var(--muted);font-weight:500}
 .main-nav{display:flex;align-items:center;gap:1.8rem}
-.main-nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0}
-.main-nav ul a{color:var(--muted);font-family:var(--mono);font-size:.88rem}
-.main-nav ul a:hover{color:var(--text);text-decoration:none}
+.main-nav>ul{display:flex;align-items:center;gap:1.4rem;list-style:none;margin:0;padding:0}
+.main-nav>ul>li>a{display:block;color:var(--muted);font-family:var(--mono);font-size:.88rem;white-space:nowrap}
+.main-nav>ul>li>a:hover{color:var(--text);text-decoration:none}
+
+/* Apps menu: one header entry however many apps there are. It's a <details>,
+   so it opens without JavaScript; main.js closes it on outside click / Escape. */
+.nav-menu{position:relative}
+.nav-menu summary{display:flex;align-items:center;gap:.45em;cursor:pointer;list-style:none;user-select:none;
+  color:var(--muted);font-family:var(--mono);font-size:.88rem;white-space:nowrap}
+.nav-menu summary::-webkit-details-marker{display:none}
+.nav-menu summary::after{content:"";width:.36em;height:.36em;border:solid currentColor;border-width:0 1.5px 1.5px 0;
+  transform:translateY(-.15em) rotate(45deg);transition:transform .15s}
+.nav-menu details[open] summary::after{transform:translateY(.1em) rotate(-135deg)}
+.nav-menu summary:hover,.nav-menu details[open] summary{color:var(--text)}
+.nav-menu ul{position:absolute;top:calc(100% + 21px);left:50%;transform:translateX(-50%);width:max-content;min-width:280px;list-style:none;margin:0;padding:.4rem;
+  background:var(--surface);border:1px solid var(--line);border-radius:0 0 8px 8px}
+.nav-menu ul a{display:flex;align-items:center;gap:.8rem;padding:.55rem .6rem;border-radius:var(--radius);
+  color:var(--text);font-weight:600;font-size:.94rem;line-height:1.3}
+.nav-menu ul a:hover{background:var(--bg-2);text-decoration:none}
+.nav-menu ul img{width:36px;height:36px;border-radius:9px;flex:0 0 auto}
+.nav-menu ul small{display:block;margin-top:.15rem;font-family:var(--mono);font-weight:400;font-size:.74rem;color:var(--muted)}
+.nav-menu .nav-menu-all{margin-top:.35rem;padding-top:.35rem;border-top:1px solid var(--line-soft)}
+.nav-menu .nav-menu-all a{font-family:var(--mono);font-weight:400;font-size:.8rem;color:var(--muted)}
+.nav-menu .nav-menu-all a:hover{color:var(--text)}
 .nav-actions{display:flex;align-items:center;gap:.9rem}
 .lang-toggle{display:inline-flex;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
 .lang-toggle button{border:0;background:none;padding:.3rem .6rem;font-family:var(--mono);font-size:.78rem;color:var(--muted);cursor:pointer}
@@ -113,10 +134,13 @@ p{margin:0 0 1em}
 .service h3{margin:.15rem 0 .35rem}
 .service p{color:var(--muted);margin:0;font-size:.97rem}
 
-.tech-strip{margin-top:2.2rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1rem;font-family:var(--mono);font-size:.85rem}
-.tech-strip>span{color:var(--muted)}
-.tech-strip ul{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0}
-.tech-strip li{padding:.2rem .6rem;border:1px solid var(--line);border-radius:var(--radius);color:var(--text-2)}
+/* Technologies, grouped by area so the list can grow without turning into a wall of tags. */
+.tech{margin-top:2.6rem}
+.tech-title{font-family:var(--mono);font-size:.85rem;font-weight:500;color:var(--muted);letter-spacing:0;margin:0 0 1.1rem}
+.tech-groups{display:grid;grid-template-columns:repeat(4,1fr);gap:1.8rem 2rem}
+.tech-group h4{font-family:var(--mono);font-size:.8rem;font-weight:500;color:var(--green);letter-spacing:0;text-transform:lowercase;margin:0 0 .65rem}
+.tech-group ul{list-style:none;display:flex;flex-wrap:wrap;gap:.45rem;margin:0;padding:0;font-family:var(--mono);font-size:.82rem}
+.tech-group li{padding:.2rem .6rem;border:1px solid var(--line);border-radius:var(--radius);color:var(--text-2)}
 
 /* ===== Process: one connected track ===== */
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
@@ -160,6 +184,7 @@ p{margin:0 0 1em}
 /* ===== Footer ===== */
 .site-footer{background:var(--bg);color:var(--muted)}
 .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2.5rem;padding:3rem 22px}
+.footer-inner--4{grid-template-columns:2fr 1fr 1fr 1fr}
 .footer-brand p{margin:.9rem 0 0;max-width:36ch;font-size:.95rem}
 .footer-col h4{font-family:var(--mono);font-weight:500;font-size:.82rem;color:var(--text);margin-bottom:.9rem}
 .footer-col ul{list-style:none;padding:0;margin:0;font-size:.93rem}
@@ -267,26 +292,35 @@ html:not([lang="pt"]) .only-pt,html[lang="pt"] .only-en{display:none!important}
 .summary-box ul{margin:0}
 
 /* ===== Responsive ===== */
+/* Header: below 1040px the links go behind the menu button. The widest header
+   (an app page in Portuguese) needs about 1010px; check that when adding links. */
+@media(max-width:1040px){
+  .nav-toggle{display:flex}
+  .main-nav{position:fixed;inset:64px 0 auto 0;max-height:calc(100vh - 64px);overflow-y:auto;background:var(--bg);
+    flex-direction:column;align-items:stretch;gap:0;padding:.6rem 0 1.2rem;border-bottom:1px solid var(--line);
+    transform:translateY(-140%);visibility:hidden;transition:transform .25s ease,visibility 0s .25s}
+  .main-nav.open{transform:translateY(0);visibility:visible;transition:transform .25s ease}
+  .main-nav>ul{flex-direction:column;align-items:stretch;gap:0}
+  .main-nav>ul>li>a{display:block;padding:.8rem 22px}
+  .nav-menu summary{padding:.8rem 22px}
+  .nav-menu ul{position:static;transform:none;width:auto;min-width:0;padding:0 16px .5rem;border:0;border-radius:0;background:none}
+  .nav-menu .nav-menu-all{border-top:0;margin-top:0;padding-top:0}
+  .nav-actions{padding:.6rem 22px 0;justify-content:space-between}
+}
 @media(max-width:960px){
   .hero-inner,.about-grid,.contact-grid,.app-hero,.product,.wide-shots,.plans{grid-template-columns:1fr;gap:2.4rem}
   .product-shot{margin-bottom:-5rem}
   .gallery{grid-template-columns:repeat(2,1fr);gap:3rem 3rem;padding:0 1.5rem}
   .steps{grid-template-columns:1fr 1fr;row-gap:2rem}
-  .footer-inner{grid-template-columns:1fr 1fr}
+  .tech-groups{grid-template-columns:1fr 1fr}
+  .footer-inner,.footer-inner--4{grid-template-columns:1fr 1fr}
 }
 @media(max-width:720px){
-  .nav-toggle{display:flex}
-  .main-nav{position:fixed;inset:64px 0 auto 0;background:var(--bg);flex-direction:column;align-items:stretch;gap:0;
-    padding:.6rem 0 1.2rem;border-bottom:1px solid var(--line);
-    transform:translateY(-140%);transition:transform .25s ease}
-  .main-nav.open{transform:translateY(0)}
-  .main-nav ul{flex-direction:column;gap:0}
-  .main-nav ul a{display:block;padding:.8rem 22px}
-  .nav-actions{padding:.6rem 22px 0;justify-content:space-between}
   .services{grid-template-columns:1fr}
   .service,.service:nth-child(odd),.service:nth-child(even){padding:1.4rem 0;border-right:0}
   .steps{grid-template-columns:1fr}
-  .footer-inner{grid-template-columns:1fr}
+  .footer-inner,.footer-inner--4{grid-template-columns:1fr}
+  .tech-groups{grid-template-columns:1fr}
   .term{font-size:.8rem}
   .product{padding:1.8rem 1.4rem}
   .app-hero .phones .phone+.phone{display:none}

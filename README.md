@@ -10,6 +10,8 @@ jfpfsolutions-site/
 ├── indigo-iptv/index.html   Indigo IPTV app page
 ├── luar/index.html          Luar app page
 ├── luar/privacy/index.html  Luar privacy policy
+├── cuco/index.html          Cuco app page (also the App Store support and marketing URL)
+├── cuco/privacy/index.html  Cuco privacy policy
 ├── privacy/index.html       Indigo IPTV + website privacy policy
 ├── css/styles.css           Styling (dark, green accent, monospace labels; system fonts only)
 ├── js/main.js               Language toggle, mobile nav, Apps menu, contact form
@@ -18,7 +20,7 @@ jfpfsolutions-site/
 
 ## URLs: don't move these
 The App Store / Google Play listings point at these addresses, so the folders must keep their names:
-`/`, `/privacy/`, `/indigo-iptv/`, `/luar/`, `/luar/privacy/`.
+`/`, `/privacy/`, `/indigo-iptv/`, `/luar/`, `/luar/privacy/`, `/cuco/`, `/cuco/privacy/`.
 
 ## Adding an app
 The header has a single **Apps** menu, so it stays the same size however many apps there are.

@@ -22,6 +22,10 @@ jfpfsolutions-site/
 The App Store / Google Play listings point at these addresses, so the folders must keep their names:
 `/`, `/privacy/`, `/indigo-iptv/`, `/luar/`, `/luar/privacy/`, `/cuco/`, `/cuco/privacy/`.
 
+## Store links
+- Luar (Apple TV): https://apps.apple.com/app/id6832809360. It's on `luar/index.html` (hero badge and footer) and the Luar card in `index.html`.
+  The link has no country in it, so Apple opens the visitor's own store.
+
 ## Adding an app
 The header has a single **Apps** menu, so it stays the same size however many apps there are.
 For a new app, add it in four places (copy an existing entry):

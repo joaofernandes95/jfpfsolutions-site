@@ -12,6 +12,8 @@ jfpfsolutions-site/
 ├── luar/privacy/index.html  Luar privacy policy
 ├── cuco/index.html          Cuco app page (also the App Store support and marketing URL)
 ├── cuco/privacy/index.html  Cuco privacy policy
+├── malta/index.html         Malta app page (also the App Store support and marketing URL)
+├── malta/privacy/index.html Malta privacy policy
 ├── privacy/index.html       Indigo IPTV + website privacy policy
 ├── css/styles.css           Styling (dark, green accent, monospace labels; system fonts only)
 ├── js/main.js               Language toggle, mobile nav, Apps menu, contact form
@@ -20,7 +22,8 @@ jfpfsolutions-site/
 
 ## URLs: don't move these
 The App Store / Google Play listings point at these addresses, so the folders must keep their names:
-`/`, `/privacy/`, `/indigo-iptv/`, `/luar/`, `/luar/privacy/`, `/cuco/`, `/cuco/privacy/`.
+`/`, `/privacy/`, `/indigo-iptv/`, `/luar/`, `/luar/privacy/`, `/cuco/`, `/cuco/privacy/`, `/malta/`,
+`/malta/privacy/`.
 
 ## Store links
 - Luar (Apple TV): https://apps.apple.com/app/id6832809360. It's on `luar/index.html` (hero badge and footer) and the Luar card in `index.html`.

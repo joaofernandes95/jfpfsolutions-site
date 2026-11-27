@@ -218,6 +218,7 @@ html:not([lang="pt"]) .only-pt,html[lang="pt"] .only-en{display:none!important}
 .phone--sm img{border-radius:37px}
 .tablet{border-radius:26px;padding:14px;background:#05070a;border:1px solid #3a414b;box-shadow:0 30px 60px -24px rgba(0,0,0,.7)}
 .tablet img{border-radius:14px;width:100%}
+.tablet video{display:block;width:100%;height:auto;border-radius:5px}
 .landscape{border-radius:40px;padding:12px;background:#05070a;border:1px solid #3a414b;box-shadow:0 30px 60px -24px rgba(0,0,0,.7)}
 .landscape img{border-radius:29px;width:100%}
 

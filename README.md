@@ -11,6 +11,7 @@ jfpfsolutions-site/
 ├── luar/index.html          Luar app page
 ├── luar/privacy/index.html  Luar privacy policy
 ├── cuco/index.html          Cuco app page (also the App Store support and marketing URL)
+├── cuco/press/index.html    Cuco press kit (fact sheet, descriptions, videos, screenshots; ZIP in assets/cuco/press/)
 ├── cuco/privacy/index.html  Cuco privacy policy
 ├── privacy/index.html       Indigo IPTV + website privacy policy
 ├── css/styles.css           Styling (dark, green accent, monospace labels; system fonts only)
@@ -25,6 +26,11 @@ The App Store / Google Play listings point at these addresses, so the folders mu
 ## Store links
 - Luar (Apple TV): https://apps.apple.com/app/id6832809360. It's on `luar/index.html` (hero badge and footer) and the Luar card in `index.html`.
   The link has no country in it, so Apple opens the visitor's own store.
+- Cuco (Apple TV now; iPhone and iPad from 18 December 2026): https://apps.apple.com/app/apple-store/id6834225652,
+  with a campaign token so App Store Connect › Analytics › Campaigns shows which page sent each download:
+  `?pt=129713892&ct=<campaign>&mt=8`. `ct=website` on `cuco/index.html`, `ct=website-home` on the Cuco card in
+  `index.html`, `ct=press-page` on `cuco/press/index.html`. On 18 December, drop the "iPhone and iPad from
+  18 December" lines on the Cuco page and the home card, and the date in the press page's fact sheet.
 
 ## Adding an app
 The header has a single **Apps** menu, so it stays the same size however many apps there are.

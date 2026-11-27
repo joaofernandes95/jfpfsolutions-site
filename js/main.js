@@ -39,7 +39,9 @@
 
   var saved = null;
   try { saved = localStorage.getItem('jfpf-lang'); } catch (e) {}
-  var initial = saved || ((navigator.language || 'en').toLowerCase().indexOf('pt') === 0 ? 'pt' : 'en');
+  // A link can pick the language: ?lang=pt (handy for sharing a page with Portuguese visitors).
+  var asked = (/[?&]lang=(en|pt)\b/.exec(location.search) || [])[1];
+  var initial = asked || saved || ((navigator.language || 'en').toLowerCase().indexOf('pt') === 0 ? 'pt' : 'en');
   applyLang(initial);
 
   document.querySelectorAll('.lang-toggle button').forEach(function (b) {

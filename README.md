@@ -6,7 +6,8 @@ development. No WordPress, no build step. Just open `index.html`.
 ## Structure
 ```
 jfpfsolutions-site/
-├── index.html               Home: Hero, Services, Apps, Process, About, Contact
+├── index.html               Home: Hero, Services, Casa 3D, Apps, Process, About, Contact
+├── casa-3d/index.html       Casa 3D: the 3D smart-home dashboard we install on Home Assistant
 ├── indigo-iptv/index.html   Indigo IPTV app page
 ├── luar/index.html          Luar app page
 ├── luar/privacy/index.html  Luar privacy policy
@@ -16,12 +17,21 @@ jfpfsolutions-site/
 ├── privacy/index.html       Indigo IPTV + website privacy policy
 ├── css/styles.css           Styling (dark, green accent, monospace labels; system fonts only)
 ├── js/main.js               Language toggle, mobile nav, Apps menu, contact form
-└── assets/                  Favicon, plus one folder of icons/screenshots per app
+└── assets/                  Favicon, plus one folder of icons/screenshots per app (and casa-3d/)
 ```
 
 ## URLs: don't move these
 The App Store / Google Play listings point at these addresses, so the folders must keep their names:
-`/`, `/privacy/`, `/indigo-iptv/`, `/luar/`, `/luar/privacy/`, `/cuco/`, `/cuco/privacy/`.
+`/`, `/casa-3d/`, `/privacy/`, `/indigo-iptv/`, `/luar/`, `/luar/privacy/`, `/cuco/`, `/cuco/privacy/`.
+
+## Language links
+Every page follows the visitor's choice, then their browser's language. A link can choose it:
+`https://jfpfsolutions.com/casa-3d/?lang=pt` always opens in Portuguese (handy for sharing).
+
+## Casa 3D screenshots
+`assets/casa-3d/` shows the example apartment ("Apartamento T3 (exemplo)", house-control's
+`demo-t3` plan), never a client's home. They were taken from house-control's `embed.html` with
+that plan, in the evening, with every light on.
 
 ## Store links
 - Luar (Apple TV): https://apps.apple.com/app/id6832809360. It's on `luar/index.html` (hero badge and footer) and the Luar card in `index.html`.
